@@ -51,13 +51,19 @@ if (isset($_POST['submit'])) {
 
             </div>
             <div class="form-group">
+                <label for="exampleInputPassword1">Mobile</label>
+                <input name="mobile" type="text" class="form-control" autocomplete="off" placeholder="Enter votre numero">
+            </div>
+
+            <div class="form-group">
                 <label for="exampleInputPassword1">Mot de passe</label>
                 <input type="password" name="password" class="form-control" autocomplete="off" placeholder="Password">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Mobile</label>
-                <input name="mobile" type="text" class="form-control" autocomplete="off" placeholder="Enter votre numero">
+                <label for="exampleInputPassword1">Mot de passe</label>
+                <input type="password" value="12234" name="password" class="form-control" autocomplete="off" placeholder="Password">
             </div>
+
 
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </form>

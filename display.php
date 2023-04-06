@@ -20,7 +20,7 @@ include 'connect.php';
     <div class="header">
         <h1>Operation Crud</h1>
     </div>
-    <div class="conatainer">
+    <div class="container">
         <button type="" name="" class="btn btn-primary my-5 "> <a class="text-light" href="user.php">Ajouter Utilisateur</a> </button>
 
         <table class="table">
@@ -54,10 +54,10 @@ include 'connect.php';
                         <td>' . $password . '</td>
                         
                         <td>
-                    <button  class="btn btn-success"><a class="color-light" href="modifier.php">Mdifier</a></button>
-                    <button class="btn btn-danger"><a class="color-light " href="supprimer.php?delteteid= '.$id.'">Supprimer</a></button>
+                    <button  class="btn btn-success"><a  href="modifier.php?updateid =' . $id . '" class="text-light">Mdifier</a></button>
+                    <button class="btn btn-danger"><a  href="supprimer.php?delid=' . $id . '" class="text-light ">Supprimer</a></button>
                    
-                </td>
+                 </td>
                     </tr>
                     
                     ';
