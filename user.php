@@ -34,34 +34,34 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <div class="header">
+    <div class="header bg-primary">
         <h1>Operation Crud</h1>
     </div>
     <div class="container my-5">
 
-        <form method="post" action="">
+        <form method="post" action="" onsubmit="return validateForm()">
             <div class="form-group">
                 <label for="nom">Nom </label>
-                <input name="name" type="text" class="form-control" autocomplete="off" placeholder="Enter your name">
+                <input name="name" type="text" class="form-control" autocomplete="off" placeholder="Enter your name" required="required">
 
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Email </label>
-                <input name="email" type="email" class="form-control" autocomplete="off" placeholder="Enter email">
+                <input name="email" type="email" class="form-control" autocomplete="off" placeholder="Enter email" required="required">
 
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Mobile</label>
-                <input name="mobile" type="text" class="form-control" autocomplete="off" placeholder="Enter votre numero">
+                <input name="mobile" type="text" class="form-control" autocomplete="off" placeholder="Enter votre numero" required="required">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Mot de passe</label>
-                <input type="password" name="password" class="form-control" autocomplete="off" placeholder="Password">
+                <input type="password" name="password" class="form-control" required pattern=".{8,}" autocomplete="off" placeholder="Password">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Mot de passe</label>
-                <input type="password" value="12234" name="password" class="form-control" autocomplete="off" placeholder="Password">
+                <input type="password" name="password" class="form-control" autocomplete="off" placeholder="Password">
             </div>
 
 
@@ -69,7 +69,19 @@ if (isset($_POST['submit'])) {
         </form>
 
     </div>
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirm_password = document.getElementById("confirm_password").value;
 
+            if (password !== confirm_password) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

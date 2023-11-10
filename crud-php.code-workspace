@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "crud-php",
+		"path": "."
+	},
+	{
+		"name": "YourDish-site",
+		"path": "../MES-SITES/YourDish-site"
+	}
+],
+  "settings": {}
+}
